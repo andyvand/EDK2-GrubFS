@@ -69,7 +69,6 @@
   gEfiBlockIoProtocolGuid
   gEfiBlockIo2ProtocolGuid
   gEfiSimpleFileSystemProtocolGuid
-  gEfiUnicodeCollationProtocolGuid
   gEfiUnicodeCollation2ProtocolGuid
 
 [Pcd]

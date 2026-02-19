@@ -83,7 +83,9 @@
 #endif
 #if 1 && !defined(HAVE_MEMCPY)
 #define HAVE_MEMCPY 1
+#ifndef memcpy
 #define memcpy CopyMem
+#endif
 #endif
 #if 1 && !defined(HAVE_MEMMOVE)
 #define HAVE_MEMMOVE 1

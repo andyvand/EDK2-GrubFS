@@ -1,3 +1,4 @@
+#if 0
 /* This function performs three tasks:
    - Make sectors disk relative from partition relative.
    - Normalize offset to be less than the sector size.
@@ -58,3 +59,4 @@ grub_disk_cache_get_index (unsigned long dev_id, unsigned long disk_id,
 	   + ((unsigned) (sector >> GRUB_DISK_CACHE_BITS)))
 	  % GRUB_DISK_CACHE_NUM);
 }
+#endif

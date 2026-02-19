@@ -30,7 +30,10 @@
 
 /* Disk reads may trigger other disk reads. So, limit recursion depth. */
 #define MAX_READ_RECURSION_DEPTH	16
+
+#if 0
 static unsigned int read_recursion_depth = 0;
+#endif
 
 /* The last time the disk was used.  */
 static grub_uint64_t grub_last_time = 0;
@@ -76,6 +79,7 @@ grub_disk_cache_invalidate_all (void)
     }
 }
 
+#if 0
 static char *
 grub_disk_cache_fetch (unsigned long dev_id, unsigned long disk_id,
 		       grub_disk_addr_t sector)
@@ -145,8 +149,7 @@ grub_disk_cache_store (unsigned long dev_id, unsigned long disk_id,
 
   return GRUB_ERR_NONE;
 }
-
-
+#endif
 
 grub_disk_dev_t grub_disk_dev_list;
 

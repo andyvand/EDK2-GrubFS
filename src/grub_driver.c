@@ -61,10 +61,10 @@ GetFSGuid(VOID)
     EFI_STATUS Status = EFI_SUCCESS;
 
     Status = gBS->LocateProtocol(&gEfiUnicodeCollation2ProtocolGuid, NULL, (VOID**)&UnicodeCollation);
-    if (EFI_ERROR(Status) || (UnicodeCollation == NULL))
+    /*if (EFI_ERROR(Status) || (UnicodeCollation == NULL))
     {
       Status = gBS->LocateProtocol(&gEfiUnicodeCollationProtocolGuid, NULL, (VOID**)&UnicodeCollation);
-    }
+    }*/
 
     if (EFI_ERROR(Status) || (UnicodeCollation == NULL))
     {

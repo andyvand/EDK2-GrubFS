@@ -78,7 +78,10 @@
 
 #define memeq(a, b, size) (CompareMem(a, b, size) == 0)
 #define memzero(buf, size) CopyMem(buf, 0, size)
+
+#ifndef memcpy
 #define memcpy(tbuf, buf, size) CopyMem(tbuf, buf, size)
+#endif
 
 #define min(x, y) ((x) < (y) ? (x) : (y))
 #define min_t(type, x, y) min(x, y)
